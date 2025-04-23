@@ -227,7 +227,7 @@ const Home = () => {
           Cities are complex systems and fast-growing, which challenge urban planners and designers to clearly understand the interconnection of their economic, ecological, and demographic changes. Over the past three decades, many technological innovations have been produced to support the process of city planning, design, and management.
         </Paragraph>
         <Paragraph>
-          However, these technologies have yet to reflect the reality and complexity of urban systems. The problem is that urban data, modeling, and visualization systems are fragmented, and limited to their data formats with limited interoperability. In addition, most of the current planning support systems provide an abstract representation of cities and lack real-time data, which does not help an evidence-based and data-driven planning, design, and decision-making process.
+          However, these technologies have yet to reflect the reality and complexity of urban systems. The problem is that urban data, modeling, and visualization systems are fragmented and limited to their data formats, with limited interoperability. In addition, most of the current planning support systems provide an abstract representation of cities and lack real-time data, which does not help an evidence-based and data-driven planning, design, and decision-making process.
         </Paragraph>
       </CardSection>
       <CardSection
