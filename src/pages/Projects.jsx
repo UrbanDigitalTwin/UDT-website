@@ -89,6 +89,9 @@ const DetailContainer = styled.div`
   padding: 3rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.06);
   margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const BackButton = styled.button`
@@ -212,7 +215,7 @@ const projectsData = [
     title: 'Urban Digital Twin Interoperability Pilot',
     type: 'Research & Development',
     image: '/images/udt-path.png',
-    videoUrl: 'https://www.youtube.com/embed/1IgQOZlN83U',
+    videoUrl: 'https://www.youtube.com/embed/2EEXQFLJ408?si=bOkCPeSrF8AE883p',
     description: 'This project develops an Urban Digital Twin (UDT) framework using OGC standards to improve data interoperability and system integration.',
     team: 'Dr. Soheil Sabri (PI), Benjamin Lee, Kyle Shervington, Kalp Thakar',
     fullDescription: 'This project develops an Urban Digital Twin (UDT) framework using OGC standards to improve data interoperability and system integration. It focuses on noise modeling (using 3D city models and sensor data) and Geo-AI analysis (using camera imagery and machine learning for object detection). The project aims to create prototype APIs and tools, demonstrating how OGC standards can enable a robust and interoperable UDT ecosystem.',
@@ -243,7 +246,20 @@ const projectsData = [
     funding: 'City of Altamonte Springs',
     collaborators: 'City of Altamonte Springs, Florida',
     link: '#'
-  }
+  },
+  {
+    id: 'virtual-nyc-vr',
+    title: 'Virtual Tour of New York City in VR',
+    type: 'Research & Development',
+    image: '/images/newyork-1.jpeg',
+    videoUrl: 'https://www.youtube.com/embed/_Xuye3dXzt0',
+    description: "A fully immersive VR experience of New York City, built with Unity and Cesium Ion's photorealistic 3D tiles. Running on the Oculus Meta Quest 2 and powered by Unity's XR Rig and Interaction Toolkit, users can seamlessly 'walk' through detailed cityscapes, inspect landmark architectures, and explore the urban environment in real time.",
+    team: 'Naga Vaishnavi Marupaka',
+    fullDescription: "A fully immersive VR experience of New York City, built with Unity and Cesium Ion's photorealistic 3D tiles. Running on the Oculus Meta Quest 2 and powered by Unity's XR Rig and Interaction Toolkit, users can seamlessly 'walk' through detailed cityscapes, inspect landmark architectures, and explore the urban environment in real time.",
+    funding: '',
+    collaborators: '',
+    link: ''
+  },
 ];
 
 const ProjectDetail = () => {
@@ -290,8 +306,12 @@ const ProjectDetail = () => {
             </>
           )}
           
-          <InfoTitle>Collaborators</InfoTitle>
-          <ProjectText>{project.collaborators}</ProjectText>
+          {project.collaborators && project.collaborators.trim() !== '' && (
+            <>
+              <InfoTitle>Collaborators</InfoTitle>
+              <ProjectText>{project.collaborators}</ProjectText>
+            </>
+          )}
           
           {project.link && project.link !== '#' && (
             <>

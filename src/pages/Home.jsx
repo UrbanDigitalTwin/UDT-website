@@ -6,6 +6,7 @@ const HomeContainer = styled.div`
   margin: 0 auto;
   padding: ${({ theme }) => theme.spacing.xl} ${({ theme }) => theme.spacing.md};
   position: relative;
+  margin-top: 180px;
 `;
 
 const HeroSection = styled.section`
@@ -177,7 +178,7 @@ const SolutionImagesRow = styled.div`
 
 const SolutionImage = styled.img`
   height: 230px;
-  width: 340px;
+  width: 350px;
   object-fit: cover;
   border-radius: 0;
   box-shadow: 0 2px 16px rgba(15,164,175,0.10);
@@ -194,11 +195,6 @@ const SolutionImage = styled.img`
 const Home = () => {
   return (
     <HomeContainer>
-      <HeroSection>
-        <HeroContent as={motion.div} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <HeroTitle>Urban Digital Twin Lab</HeroTitle>
-        </HeroContent>
-      </HeroSection>
       <CardSection
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

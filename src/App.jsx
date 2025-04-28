@@ -14,6 +14,7 @@ import Teaching from './pages/Teaching';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Search from './pages/Search';
+import Publications from './pages/Publications';
 
 const ThemedApp = () => {
   const { currentTheme } = useTheme();
@@ -31,6 +32,7 @@ const ThemedApp = () => {
           <Route path="news" element={<News />} />
           <Route path="contact" element={<Contact />} />
           <Route path="search" element={<Search />} />
+          <Route path="publications" element={<Publications />} />
         </Route>
       </Routes>
     </StyledThemeProvider>
