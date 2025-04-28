@@ -132,6 +132,10 @@ const SectionTitle = styled.h2`
 const Publications = () => {
   const publications = [
     {
+      title: "Digital Twin Fundamentals and Applications, Book",
+      link: "https://link.springer.com/book/10.1007/978-3-031-67778-6"
+    },
+    {
       title: "Review and assessment of 3D spatial data models for managing underground utility networks",
       link: "https://www.sciencedirect.com/science/article/pii/S0886779824006370"
     },

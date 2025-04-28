@@ -254,10 +254,10 @@ const projectsData = [
     image: '/images/newyork-1.jpeg',
     videoUrl: 'https://www.youtube.com/embed/_Xuye3dXzt0',
     description: "A fully immersive VR experience of New York City, built with Unity and Cesium Ion's photorealistic 3D tiles. Running on the Oculus Meta Quest 2 and powered by Unity's XR Rig and Interaction Toolkit, users can seamlessly 'walk' through detailed cityscapes, inspect landmark architectures, and explore the urban environment in real time.",
-    team: 'Naga Vaishnavi Marupaka',
+    team: 'Dr. Soheil Sabri (PI), Naga Vaishnavi Marupaka, Kyle Shervington',
     fullDescription: "A fully immersive VR experience of New York City, built with Unity and Cesium Ion's photorealistic 3D tiles. Running on the Oculus Meta Quest 2 and powered by Unity's XR Rig and Interaction Toolkit, users can seamlessly 'walk' through detailed cityscapes, inspect landmark architectures, and explore the urban environment in real time.",
-    funding: '',
-    collaborators: '',
+    funding: 'Institute of Simulation and Training, UCF',
+    collaborators: 'Knights Digital Twin, Smart Cities Group',
     link: ''
   },
 ];

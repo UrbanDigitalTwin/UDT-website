@@ -34,6 +34,9 @@ const DirectorImage = styled.img`
 
 const DirectorInfo = styled.div`
   flex: 1;
+  p {
+    text-align: justify;
+  }
 `;
 
 const DirectorName = styled.h2`
@@ -81,14 +84,14 @@ const Leadership = () => {
         <DirectorInfo>
           <DirectorName>Dr. Soheil Sabri</DirectorName>
           <DirectorTitle>Director</DirectorTitle>
-          <DirectorBio>
+          <DirectorBio style={{ textAlign: 'justify' }}>
             Dr. Soheil Sabri is an Assistant Professor at the School of Modeling, Simulation and Training, 
             Knights Digital Twin Initiative at the University of Central Florida (UCF). He is an Urban Planner 
             and Geospatial Scientist focused on advancing urban development through research, practical work, 
             and education. His main interests include Urban Digital Twins, Multi-dimensional Planning Support 
             Systems, and analytical tools that provide data-driven insights for urban planning.
           </DirectorBio>
-          <DirectorBio>
+          <DirectorBio style={{ textAlign: 'justify' }}>
             Dr. Sabri leads pioneering research and education in Urban Digital Twins, covering areas like 
             Development Envelope Control, Rule-Based Compliance Assessment, and Environmentally Sustainable 
             Design (ESD). He significantly influences digital urban planning through his roles in various 
