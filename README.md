@@ -58,6 +58,9 @@ A modern, responsive website for the Urban Digital Twin Lab at the University of
 - Research highlights
 - Event announcements
 
+#### Publications
+- Recent Publications
+
 #### Contact
 - Contact information
 - Location details
