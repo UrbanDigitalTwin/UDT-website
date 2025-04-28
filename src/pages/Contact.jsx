@@ -103,8 +103,8 @@ const Contact = () => {
           <ContactItem>
             <FaEnvelope />
             <ContactText>
-              <ContactLink href="mailto:soheilsabri@ucf.edu">
-                soheilsabri@ucf.edu
+              <ContactLink href="mailto:soheil.sabri@ucf.edu">
+                soheil.sabri@ucf.edu
               </ContactLink>
             </ContactText>
           </ContactItem>

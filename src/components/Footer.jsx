@@ -144,7 +144,7 @@ const Footer = () => (
       {/* Column 3: Contact Info */}
       <FooterCol>
         <FooterTitle>Contact Us</FooterTitle>
-        <ContactText><b>Email:</b> soheilsabri@ucf.edu</ContactText>
+        <ContactText><b>Email:</b> soheil.sabri@ucf.edu</ContactText>
         <ContactText><b>Office Hours:</b> 8 a.m. to 5 p.m. Monday – Friday</ContactText>
         <ContactText><b>Location:</b><br />
           Partnership II, Suit 135C, 3100 Technology Pkwy, Orlando, FL 32826
