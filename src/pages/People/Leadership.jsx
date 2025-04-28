@@ -1,91 +1,94 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const Container = styled.div`
+const LeadershipContainer = styled.div`
+  padding: ${({ theme }) => theme.spacing.xl};
   max-width: 1200px;
   margin: 0 auto;
+`;
+
+const DirectorCard = styled.div`
+  background: ${({ theme }) => theme.colors.surface};
+  border-radius: ${({ theme }) => theme.borderRadius.xl};
   padding: ${({ theme }) => theme.spacing.xl};
-`;
-
-const ProfileCard = styled(motion.div)`
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  overflow: hidden;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-`;
-
-const ProfileHeader = styled.div`
+  box-shadow: 0 4px 24px ${({ theme }) => theme.colors.shadow};
   display: flex;
-  gap: 3rem;
-  padding: 2rem;
-  background: ${({ theme }) => theme.colors.light};
+  gap: ${({ theme }) => theme.spacing.xl};
+  align-items: center;
+
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    text-align: center;
   }
 `;
 
-const ProfileImage = styled.img`
-  width: 280px;
-  height: 280px;
+const DirectorImage = styled.img`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border: 3px solid ${({ theme }) => theme.colors.accent};
+  box-shadow: 0 4px 16px ${({ theme }) => theme.colors.shadow};
 `;
 
-const ProfileInfo = styled.div`
+const DirectorInfo = styled.div`
   flex: 1;
 `;
 
-const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.primary};
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+const DirectorName = styled.h2`
+  color: ${({ theme }) => theme.colors.text.primary};
+  margin-bottom: ${({ theme }) => theme.spacing.sm};
 `;
 
-const Role = styled.h2`
+const DirectorTitle = styled.p`
   color: ${({ theme }) => theme.colors.accent};
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
 `;
 
-const ProfileContent = styled.div`
-  padding: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: ${({ theme }) => theme.colors.black};
+const DirectorBio = styled.p`
+  color: ${({ theme }) => theme.colors.text.primary};
+  line-height: ${({ theme }) => theme.typography.lineHeight.relaxed};
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+`;
 
-  p {
-    margin-bottom: 1.5rem;
+const DirectorLinks = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing.md};
+  margin-top: ${({ theme }) => theme.spacing.md};
+`;
+
+const DirectorLink = styled.a`
+  color: ${({ theme }) => theme.colors.primary};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.sm};
+  transition: ${({ theme }) => theme.transitions.base};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.accent};
   }
 `;
 
 const Leadership = () => {
   return (
-    <Container>
-      <ProfileCard
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <ProfileHeader>
-          <ProfileImage src="/images/soheil-sabri.jpeg" alt="Dr. Soheil Sabri" />
-          <ProfileInfo>
-            <Title>Dr. Soheil Sabri</Title>
-            <Role>Director</Role>
-          </ProfileInfo>
-        </ProfileHeader>
-        <ProfileContent>
-          <p>
+    <LeadershipContainer>
+      <DirectorCard>
+        <DirectorImage src="/images/soheil-sabri.jpeg" alt="Dr. Soheil Sabri" />
+        <DirectorInfo>
+          <DirectorName>Dr. Soheil Sabri</DirectorName>
+          <DirectorTitle>Director</DirectorTitle>
+          <DirectorBio>
             Dr. Soheil Sabri is an Assistant Professor at the School of Modeling, Simulation and Training, 
             Knights Digital Twin Initiative at the University of Central Florida (UCF). He is an Urban Planner 
             and Geospatial Scientist focused on advancing urban development through research, practical work, 
             and education. His main interests include Urban Digital Twins, Multi-dimensional Planning Support 
             Systems, and analytical tools that provide data-driven insights for urban planning.
-          </p>
-          <p>
+          </DirectorBio>
+          <DirectorBio>
             Dr. Sabri leads pioneering research and education in Urban Digital Twins, covering areas like 
             Development Envelope Control, Rule-Based Compliance Assessment, and Environmentally Sustainable 
             Design (ESD). He significantly influences digital urban planning through his roles in various 
@@ -93,11 +96,19 @@ const Leadership = () => {
             IEEE Systems, Man, Cybernetics Society, Co-chairing and Ambassadorship of the Academia and Research 
             within the Digital Twin Consortium and contributing to the Metaverse and Urban Digital Twin working 
             groups at Open Geospatial Consortium.
-          </p>
-        </ProfileContent>
-      </ProfileCard>
-    </Container>
+          </DirectorBio>
+          <DirectorLinks>
+            <DirectorLink href="https://www.linkedin.com/in/soheil-sabri-b5a0a012a/">
+              <img src="/icons/linkedin.png" alt="LinkedIn" />
+            </DirectorLink>
+            <DirectorLink href="https://github.com/soheil-sabri">
+              <img src="/icons/github.png" alt="GitHub" />
+            </DirectorLink>
+          </DirectorLinks>
+        </DirectorInfo>
+      </DirectorCard>
+    </LeadershipContainer>
   );
 };
 
-export default Leadership; 
+export default Leadership;

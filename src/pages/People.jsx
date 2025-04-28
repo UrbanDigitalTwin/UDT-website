@@ -21,10 +21,16 @@ const NavLinks = styled.div`
 
 const NavLink = styled(Link)`
   padding: 1rem 0;
-  color: ${({ theme }) => theme.colors.text.primary};
+  color: ${({ theme }) => theme.mode === 'dark' ? '#CCCFDC' : theme.colors.text.primary};
   text-decoration: none;
   position: relative;
   font-weight: 500;
+  opacity: ${({ theme }) => theme.mode === 'dark' ? 0.8 : 1};
+
+  &:hover {
+    opacity: 1;
+    color: ${({ theme }) => theme.mode === 'dark' ? '#FFFFFF' : theme.colors.accent};
+  }
 
   &:after {
     content: '';
@@ -33,7 +39,7 @@ const NavLink = styled(Link)`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.accent};
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -44,7 +50,8 @@ const NavLink = styled(Link)`
   }
 
   &.active {
-    color: ${({ theme }) => theme.colors.primary};
+    opacity: 1;
+    color: ${({ theme }) => theme.colors.accent};
   }
 `;
 
@@ -75,13 +82,13 @@ const DirectorInfo = styled.div`
 `;
 
 const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.mode === 'dark' ? '#FFFFFF' : theme.colors.text.primary};
   margin-bottom: 2rem;
   font-size: 2.5rem;
 `;
 
 const SubTitle = styled.h2`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.mode === 'dark' ? '#FFFFFF' : theme.colors.text.primary};
   margin-bottom: 1.5rem;
   font-size: 2rem;
 `;
@@ -90,6 +97,7 @@ const Text = styled.p`
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
+  color: ${({ theme }) => theme.mode === 'dark' ? '#FFFFFF' : theme.colors.text.primary};
 `;
 
 const ResearcherGrid = styled.div`
@@ -145,6 +153,87 @@ const GraduateItem = styled.li`
   &:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   }
+`;
+
+const PeopleContainer = styled.div`
+  padding: ${({ theme }) => theme.spacing.xl};
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+const SectionTitle = styled.h2`
+  color: ${({ theme }) => theme.colors.text.primary};
+  margin-bottom: ${({ theme }) => theme.spacing.xl};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  padding-bottom: ${({ theme }) => theme.spacing.md};
+`;
+
+const PersonCard = styled.div`
+  background: ${({ theme }) => theme.colors.card};
+  border-radius: ${({ theme }) => theme.borderRadius.xl};
+  padding: ${({ theme }) => theme.spacing.lg};
+  margin-bottom: ${({ theme }) => theme.spacing.xl};
+  box-shadow: ${({ theme }) => theme.shadows.lg};
+  transition: ${({ theme }) => theme.transitions.base};
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+`;
+
+const PersonName = styled.h3`
+  color: ${({ theme }) => theme.colors.text.primary};
+  margin-bottom: ${({ theme }) => theme.spacing.sm};
+  opacity: 1;
+`;
+
+const PersonTitle = styled.p`
+  color: ${({ theme }) => theme.colors.accent};
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
+`;
+
+const PersonBio = styled.p`
+  color: ${({ theme }) => theme.colors.text.primary};
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  line-height: ${({ theme }) => theme.typography.lineHeight.relaxed};
+`;
+
+const PersonImage = styled.img`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  border: 2px solid ${({ theme }) => theme.colors.accent};
+`;
+
+const PersonLinks = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing.md};
+  margin-top: ${({ theme }) => theme.spacing.md};
+`;
+
+const PersonLink = styled.a`
+  color: ${({ theme }) => theme.colors.primary};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.sm};
+  transition: ${({ theme }) => theme.transitions.base};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.accent};
+  }
+`;
+
+const GraduateStudentImage = styled.img`
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid ${({ theme }) => theme.colors.accent};
 `;
 
 const Director = () => {
@@ -267,19 +356,23 @@ const GraduateStudents = () => {
   const students = [
     {
       name: 'Kwabena Anane-Nsiah',
-      topic: 'Digital Transformation and Digital Twin'
+      topic: 'Digital Transformation and Digital Twin',
+      image: '/images/Kwabena.jpg'
     },
     {
       name: 'Nasim Yeganeh',
-      topic: 'Hurricane Damage and Rental Housing Affordability Fluctuation'
+      topic: 'Hurricane Damage and Rental Housing Affordability Fluctuation',
+      image: '/images/Nasim.jpg'
     },
     {
       name: 'Nikoo Mirhosseini',
-      topic: 'Utilization of Building Information Modeling to Streamline the Process of Building Permit Systems in Line with the Parametric Design Principles'
+      topic: 'Utilization of Building Information Modeling to Streamline the Process of Building Permit Systems in Line with the Parametric Design Principles',
+      image: '/images/Nikoo-Fatemeh-Mirhosseini.jpg'
     },
     {
       name: 'Ensiyeh Javaherian Pour',
-      topic: 'Developing 3D Spatial graph database'
+      topic: 'Developing 3D Spatial graph database',
+      image: '/images/Ensiyeh-Javaherian-Pour.jpg'
     }
   ];
 
@@ -289,14 +382,18 @@ const GraduateStudents = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <GraduateList>
+      <SubTitle>Graduate Students</SubTitle>
+      <ResearcherGrid>
         {students.map((student) => (
-          <GraduateItem key={student.name}>
-            <ResearcherName>{student.name}</ResearcherName>
-            <Text>{student.topic}</Text>
-          </GraduateItem>
+          <ResearcherCard key={student.name} whileHover={{ y: -5 }}>
+            <ResearcherImage src={student.image} alt={student.name} />
+            <ResearcherInfo>
+              <ResearcherName>{student.name}</ResearcherName>
+              <ResearcherRole>{student.topic}</ResearcherRole>
+            </ResearcherInfo>
+          </ResearcherCard>
         ))}
-      </GraduateList>
+      </ResearcherGrid>
     </Section>
   );
 };

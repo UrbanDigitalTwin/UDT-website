@@ -7,7 +7,7 @@ const Main = styled.main`
   min-height: 100vh;
   padding-top: 80px;
   padding-bottom: 80px; // Add padding to prevent content from being hidden behind fixed footer
-  background-color: ${({ theme }) => theme.colors.background.primary};
+  background-color: ${({ theme }) => theme.colors.background};
   transition: background-color 0.3s ease;
 `;
 
@@ -28,11 +28,11 @@ const UCFLogo = styled.img`
   width: auto;
   opacity: 0.85;
   transition: opacity 0.3s ease;
-  filter: brightness(0.9); // Slightly darken the logo to make it less prominent
+  filter: ${({ theme }) => theme.theme === 'dark' ? 'brightness(2)' : 'brightness(0.9)'};
 
   &:hover {
     opacity: 1;
-    filter: brightness(1);
+    filter: ${({ theme }) => theme.theme === 'dark' ? 'brightness(2.2)' : 'brightness(1)'};
   }
 `;
 
@@ -44,7 +44,7 @@ const Layout = () => {
         <Outlet />
       </Main>
       <Footer>
-        <a href="https://www.ucf.edu" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.cecs.ucf.edu/smst/" target="_blank" rel="noopener noreferrer">
           <UCFLogo src="/images/ucf-logo.png" alt="University of Central Florida" />
         </a>
       </Footer>

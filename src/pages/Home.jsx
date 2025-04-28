@@ -238,7 +238,7 @@ const Home = () => {
       >
         <CardHeadingRow>
           <AccentBar />
-          <CardTitle>Solution</CardTitle>
+          <CardTitle>what we do</CardTitle>
         </CardHeadingRow>
         <Paragraph>
           We conduct cutting-edge research and develop Urban Digital Twin, which is an innovative PRODUCT that transforms the PROCESS of Urban Planning and Design. This Digital Infrastructure enables the data and city model interoperability to mirror the process of city changes and provide more realistic insight for decision-makers.
