@@ -100,6 +100,7 @@ const newsData = {
       {
         title: "Podcast on Digital Twin Book",
         image: "/images/podcast.jpeg",
+        Link: "https://digitaltwinconsortium.podbean.com/e/new-book-digital-twin-fundamentals-and-applications/",
         content: "A new episode of the Digital Twin Consortium podcast features an engaging conversation with Dr. Sabri, and Dr. Kostas Alexandridis, as they discuss their newly edited volume, Digital Twin Fundamentals and Applications, recently published by Springer Nature.\n\nHosted by Bill Hoffman, Chairman & CEO of the Object Management Group (OMG), the podcast brings together the two co-chairs of the Digital Twin Consortium's Academia and Research Working Group. The discussion explores the growing significance of digital twin technology and the book's potential impact across academia, industry, and government sectors.\n\nThe episode offers insights into the foundational concepts and real-world applications covered in the book, highlighting its value as a comprehensive resource for anyone working in or studying the field of digital twins."
       },
       {
