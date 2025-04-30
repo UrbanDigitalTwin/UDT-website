@@ -92,6 +92,7 @@ const newsData = {
     April: [
       {
         title: "Next-Generation Sustainability: Advancing the Future with Geospatial Intelligence",
+        image: "/images/podcast.jpeg",
         content: "Dr. Sabri delivered a talk in an executive panel discussion titled \"Navigate the Future of Geospatial Technology\" at the 2025 Geospatial Leadership Training and Global Forum for the Next Generation of the Sustainability Agenda, held in Melbourne from April 1–3, 2025.\n\nAddressing a global audience of geospatial professionals and thought leaders, the panel explored transformative trends shaping the future of the field. Topics included GeoAI, Digital Twins, on-demand geospatial ecosystems, and machine-actionable data—all critical components for driving innovation in sustainable development and smart decision-making."
       }
     ],
