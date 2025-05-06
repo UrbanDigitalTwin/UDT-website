@@ -137,7 +137,7 @@ const newsData = {
       },
       {
         title: "Panel Discussion",
-        image: "/images/novemenr.png",
+        image: "/images/December-2024-2.jpg",
         content: "On December 11th, UDT hosted a panel session at the IRF Global RT2 Conference and Exhibition, in Orlando, FL. This panel discussion brought together experts, thought leaders, and practitioners from the fields of digital twin technology, transportation engineering, planning, modeling and simulation, city management, and the AV industry. The panelists shared innovative solutions that highlight the convergence of Urban Digital Twins and GeoAI to optimize and enhance the decision maker's understanding of the implication of Avs deployment for the built environment change."
       }
     ],
