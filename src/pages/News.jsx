@@ -117,6 +117,7 @@ const newsData = {
     February: [
       {
         title: "Guest Lecture",
+        image: "/images/XMPro-Guest Lecture.jpg"
         content: "UDT hosted Mr. Pieter van Schalkwyk, CEO of XMPro, for his interesting and engaging guest lecture in the course: \"Introduction to Digital Transformation and Digital Twins\" at the School of Modeling, Simulation, & Training. As part of collaborations, UDT and XMPro agreed to use their educational license for the students to make sense of the capabilities periodical table (CPT) toolkit developed at the Digital Twin Consortium."
       }
     ],
